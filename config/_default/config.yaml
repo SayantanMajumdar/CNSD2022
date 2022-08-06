@@ -1,0 +1,6 @@
+baseURL: '/'
+languageCode: 'en-us'
+title: 'CNSD2022, IISER Pune'
+
+params:
+  subtitle: 'Conference on Nonlinear Systems and Dynamics'

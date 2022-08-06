@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section>
+<section class="bg-dark text-white p-5 text-centar vh-100">
+    <div class="d-flex align-items-center justify-content-center d-flex align-items-center justify-content-center h-100">
+        <div class="text-center text-white">
+            <h1>{{ .Site.Title }}</h1>
+            <h2>{{ .Site.Params.subtitle }}</h2>
+            <a href="/registration" class="btn btn-lg btn-danger fw-bold border-white disabled">Register</a>
+        </div>
+    </div>
+</section>
+{{ .Content }}
+</section>
+{{ end }}

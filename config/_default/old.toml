@@ -1,0 +1,6 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'CNSD - 2022'
+
+[params]
+subtitle = 'Conference on Nonlinear Systems and Dynamics'

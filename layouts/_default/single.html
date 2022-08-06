@@ -1,0 +1,17 @@
+{{ define "main" }}
+<section>
+<section class="bg-dark text-white p-5 text-center"> 
+    <div class="d-flex align-items-center justify-content-center" style="height: 350px;">
+        <div class="row d-flex flex-grow-1">   
+            <div class="col">
+                <div class="text-center text-white">
+                    <h1>{{ .Site.Title }}</h1>
+                    <h2>{{ .Site.Params.subtitle }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ .Content }}
+</section>
+{{ end }}
