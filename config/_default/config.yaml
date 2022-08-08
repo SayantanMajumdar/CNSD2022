@@ -1,6 +1,9 @@
 baseURL: '/'
 languageCode: 'en-us'
-title: 'CNSD2022, IISER Pune'
+title: 'CNSD2022'
 
 params:
   subtitle: 'Conference on Nonlinear Systems and Dynamics'
+  venue: IISER Pune
+  date: 'Thursday 15th - Sunday 18th, December 2022'
+  email: 'cnsd2022@iiserpune.ac.in'

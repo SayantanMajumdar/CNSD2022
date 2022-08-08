@@ -1,0 +1,14 @@
+<section class="bg-dark text-white p-5 text-center"> 
+    <div class="d-flex align-items-center justify-content-center" style="height: 350px;">
+        <div class="row d-flex flex-grow-1">   
+            <div class="col">
+                <div class="text-center text-white">
+                    <h1>{{- .Site.Title }}, {{ .Site.Params.venue -}}</h1>
+                    <h2>{{- .Site.Params.subtitle -}}</h2>
+                    <h4>{{- .Site.Params.date -}}</h4>
+                    <h5><a href="mailto:{{- .Site.Params.email -}}" class="link-light">{{- .Site.Params.email -}}</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

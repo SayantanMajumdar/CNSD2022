@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{ partial "banner" . }}
+<section class="p-5 bg-dark text-white">
+  <div class="container p-5 pb-0 text-center text-md-start">
+  {{ .Content }}
+  </div>
+</section>
+<section class="p-5 bg-dark">
+    <div class="container">
+        <h4 class="text-center mb-4 text-white">
+            Various options to reach {{ .Site.Params.venue }}*
+        </h4>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+        {{ range .Site.Data.reachIISER.ways }}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading{{- .id -}}">
+                <button class="accordion-button collapsed bg-dark text-white border" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{- .id -}}" aria-expanded="false" aria-controls="flush-collapse{{- .id -}}">
+                  {{ .title }}
+                </button>
+              </h2>
+              <div id="flush-collapse{{- .id -}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{- .id -}}" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body bg-dark text-white">
+                    {{/*  {{ .text }}  */}}
+                    <div class="container p-3">
+                      <div class="row g-4">
+                        <div class="col-md d-none {{ if .map }} d-md-block {{ else }} {{ end }}">
+                          <iframe src="{{ .map }}" class="w-100 h-100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="col-md text-center text-md-start p-5">
+                          {{ .text }}
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        {{ end }}
+        </div>
+        <p class="text-white">*Information has been gathered from <a href="https://www.iiserpune.ac.in/contact">this page</a> in <a href="https://iiserpune.ac.in">IISER Pune</a> website.</p>
+    </div>
+</section>
+{{ end }}

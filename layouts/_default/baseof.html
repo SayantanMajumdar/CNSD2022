@@ -4,11 +4,11 @@
     {{- partial "head" . -}}
   </head>
   <body>
-    {{/*  {{- partial "header" . -}}  */}}
-    {{- partial "navbar" . -}}
+    {{- partial "header" . -}}
     <div id="content">
-    {{- block "main" . }}{{- end }}
+    {{- block "main" . }}{{ end -}}
     </div>
+    {{- partial "contact" . -}}
     {{- partial "footer" . -}}
     {{- partial "footer-scripts" . -}}
   </body>

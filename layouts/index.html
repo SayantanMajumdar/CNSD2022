@@ -3,12 +3,30 @@
 <section class="bg-dark text-white p-5 text-centar vh-100">
     <div class="d-flex align-items-center justify-content-center d-flex align-items-center justify-content-center h-100">
         <div class="text-center text-white">
-            <h1>{{ .Site.Title }}</h1>
-            <h2>{{ .Site.Params.subtitle }}</h2>
-            <a href="/registration" class="btn btn-lg btn-danger fw-bold border-white disabled">Register</a>
+            <div class="container p-5">
+                <h1>{{- .Site.Title }}, {{ .Site.Params.venue -}}</h1>
+                <h2>{{- .Site.Params.subtitle -}}</h2>
+                <h4>{{- .Site.Params.date -}}</h4>
+                <h5><a href="mailto:{{- .Site.Params.email -}}" class="link-light">{{- .Site.Params.email -}}</a></h5>
+            </div>
+            <a href="/registration" class="btn px-5 btn-lg btn-secondary fw-bold border-white disabled">Register</a>
+        </div>
+    </div>
+    <a href="#details" class="position-absolute bottom-0 end-0 p-5">
+        <i class="bi bi-arrow-down-circle h1"></i>
+    </a>
+</section>
+<section id="details" class="p-5 bg-dark text-white text-center text-lg-start">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md d-none d-lg-block ">
+                <div id="word-cloud" class="img-fluid"></div>
+            </div>
+            <div class="col-md p-5 lead">
+                {{ .Content }}
+            </div>
         </div>
     </div>
 </section>
-{{ .Content }}
 </section>
 {{ end }}
